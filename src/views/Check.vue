@@ -36,7 +36,7 @@
 
       <div class="buttons">
         <cube-button :inline="true" :outline="true" :primary="true">手动盘点</cube-button>
-        <cube-button :inline="true" :primary="true">扫码盘点</cube-button>
+        <cube-button :inline="true" :primary="true" @click="toScan">扫码盘点</cube-button>
       </div>
     </div>
   </div>
@@ -49,7 +49,11 @@ export default {
   data() {
     return {};
   },
-  methods: {}
+  methods: {
+    toScan() {
+      this.$router.push({ name: "Scan" });
+    }
+  }
 };
 </script>
 
