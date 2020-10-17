@@ -1,6 +1,6 @@
 <template>
   <div class="scanResult">
-    <MyHeader title="扫描结果" :back="true" />
+    <!-- <MyHeader title="扫描结果" :back="true" /> -->
 
     <div class="card">
       <div class="title">
@@ -9,7 +9,9 @@
         <span class="color-yellow">未盘点</span>
       </div>
       <div class="name">课桌椅</div>
-      <div class="price"><span>¥698.00</span>(1台件)</div>
+      <div class="price">
+        <span>¥698.00</span>(1台件)
+      </div>
       <table>
         <tr>
           <td>品牌：</td>
@@ -39,7 +41,7 @@
 export default {
   name: "ScanResult",
   components: {
-    MyHeader: () => import("../components/MyHeader"),
+    MyHeader: () => import("../components/MyHeader")
   },
   data() {
     return {};
@@ -47,8 +49,8 @@ export default {
   methods: {
     confirm() {
       this.$router.go(-1);
-    },
-  },
+    }
+  }
 };
 </script>
 

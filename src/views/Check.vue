@@ -1,7 +1,6 @@
 <template>
   <div class="check">
     <div class="top">
-      <div class="title">盘点</div>
       <div class="menus">
         <div class="menu menu-active">进行中</div>
         <div class="menu">已完成</div>
@@ -61,11 +60,6 @@ export default {
     padding: 0.5rem 0.5rem 0.1rem;
     color: white;
     font-size: 0.4rem;
-    .title {
-      text-align: center;
-      font-size: 0.5rem;
-      margin-bottom: 0.3rem;
-    }
     .menus {
       display: flex;
       justify-content: space-around;

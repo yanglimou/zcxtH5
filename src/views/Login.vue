@@ -1,19 +1,15 @@
 <template>
   <div class="login">
-    <img class="logo" :src="logo" alt="" />
+    <img class="logo" :src="logo" alt />
 
     <div class="item">
       <i class="fa fa-user" aria-hidden="true"></i>
-      <cube-input v-model="param.username"></cube-input>
+      <cube-input v-model="param.username" placeholder="请输入用户名"></cube-input>
     </div>
 
     <div class="item">
       <i class="fa fa-key" aria-hidden="true"></i>
-      <cube-input
-        type="password"
-        v-model="param.password"
-        :eye="eye"
-      ></cube-input>
+      <cube-input type="password" v-model="param.password" :eye="eye" placeholder="请输入密码"></cube-input>
     </div>
     <cube-button type="submit" :primary="true" @click="login">登陆</cube-button>
   </div>
@@ -28,19 +24,19 @@ export default {
       logo,
       param: {
         username: "",
-        password: "",
+        password: ""
       },
       eye: {
         open: false,
-        reverse: false,
-      },
+        reverse: false
+      }
     };
   },
   methods: {
     login() {
       this.$router.push({ name: "Home" });
-    },
-  },
+    }
+  }
 };
 </script>
 
